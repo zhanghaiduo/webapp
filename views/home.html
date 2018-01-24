@@ -1,0 +1,134 @@
+<style>
+    #home {
+        color: #1aad19
+    }
+    
+    .icon-home:before {
+        content: "\e61c";
+    }
+    
+    .swiper-container img {
+        width: 100%
+    }
+    
+    .hotelMenu {
+        height: 80px;
+        font-size: 12px;
+    }
+    
+    .jdtj {
+        padding: 8px 0;
+    }
+    
+    .jdtj div {
+        padding: 5px 15px;
+    }
+    
+    .more {
+        color: #999
+    }
+    
+    .zxxx img {
+        padding: 0 3px
+    }
+    
+    .zxxx>div>.f-size18 {
+        padding: 10px 0
+    }
+    
+    .zxxx>div {
+        padding: 0 10px
+    }
+    
+    .zxxx>div p {
+        max-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    
+    .zxxx .f-size18 {
+        padding: 10px 10px;
+    }
+    
+    .zxxx img {
+        min-height: 100px;
+    }
+    
+    .zxxx hr {
+        margin: 0 0 20px 0;
+    }
+    
+    .zxxx>div span {
+        padding: 10px 0;
+        color: #999;
+    }
+</style>
+<div class="homeContainer">
+    <!-- Swiper -->
+    <header class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../public/images/banner1.png" alt=""></div>
+            <div class="swiper-slide"><img src="../public/images/banner2.png" alt=""></div>
+            <div class="swiper-slide"><img src="../public/images/banner3.png" alt=""></div>
+            <div class="swiper-slide"><img src="../public/images/banner4.png" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </header>
+    <div class="fff containerDisplay hotelMenu">
+        <div style="padding-top:15px">
+            <div class="col-xs-4 text-center">
+                <icon class="iconfont icon-tejiabiaoqian"></icon><br>特价酒店
+            </div>
+            <div class="col-xs-4 text-center border-left-right lvse">
+                <icon class="iconfont icon-shengtaihuanjing"></icon><br>绿色生态房
+            </div>
+            <div class="col-xs-4 text-center">
+                <icon class="iconfont icon-jiudian2"></icon><br>尊享房
+            </div>
+        </div>
+    </div>
+    <div class="fff margin-bottom-top jdtj">
+        <div class="pull-left f-size18">限时抢订</div>
+        <br>
+        <hr>
+    </div>
+    <div class="fff margin-bottom-top">
+        <img src="../public/images/xsqd.jpg" alt="">
+    </div>
+    <div class="fff margin-bottom-top jdtj">
+        <div class="pull-left f-size18">酒店推荐</div>
+        <div class="pull-right more">查看更多 ></div>
+        <br>
+        <hr>
+    </div>
+    <a ui-sref="user" class="fff margin-bottom-top">
+        <img src="../public/images/jdtj.jpg" alt="">
+    </a>
+    <div ui-sref="article_detail" class="fff margin-bottom-top zxxx">
+        <div class="f-size18">资讯信息</div>
+        <hr>
+        <div>
+            <p>人这一辈子，一定要去，人这一辈子，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去，一定要去，人这一辈子，一定要去</p>
+            <img class="col-xs-4 text-center" src="../public/images/banner1.png" alt="">
+            <img class="col-xs-4 text-center" src="../public/images/banner1.png" alt="">
+            <img class="col-xs-4 text-center" src="../public/images/banner1.png" alt="">
+            <span class="pull-left">2017年10月12日</span>
+            <span class="pull-right">777浏览</span>
+            <div style="clear:both;"></div>
+            <hr>
+        </div>
+    </div>
+</div>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>

@@ -1,0 +1,67 @@
+<style>
+    #buy {
+        color: #1aad19
+    }
+    
+    .icon-buy:before {
+        content: "\e620"
+    }
+    
+    .buyContainer header {
+        height: 60px;
+        line-height: 60px;
+        font-size: 16px;
+        border-bottom: 1px solid #eee
+    }
+    
+    .buyContainer .buyList {
+        height: 276px
+    }
+    
+    .buyList .f-size12 {
+        margin-top: 36px
+    }
+    
+    .rzsj {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+<div class="buyContainer">
+    <header class="fff">
+        <div ui-sref="buy" class="col-xs-4 text-center  ">
+            全部
+        </div>
+        <div ui-sref="buy_pay" class="col-xs-4 text-center border-left-right buyActive">
+            已支付
+        </div>
+        <div ui-sref="buy_consume" class="col-xs-4 text-center ">
+            已消费
+        </div>
+    </header>
+    <div>
+        <img src="../public/images/none.png" alt="">
+    </div>
+    <div class="fff margin-bottom-top buyList none">
+        <br>
+        <div class="pull-left f-size16 color999">&#x3000;订单号： Csn2018112111111</div>
+        <div class="pull-right f-size16 lvse">待消费&#x3000;</div>
+        <br>
+        <hr>
+        <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+        <div class="col-xs-5">
+            <p>测试单人间</p>
+            <p>每间可用：1</p>
+            <p class="rzsj">入住时间：21312221121saaaaaaaaaaa2232</p>
+        </div>
+        <div class="col-xs-3 orange f-size12">￥<span class="f-size16">0111.01</span></div>
+        <div style="clear:both"></div>
+        <hr>
+        <div class="pull-right">
+            <button type="button" class="btn btn-default">再次预定</button>&#x3000;
+            <button type="button" class="btn btn-success">查看详情</button> &#x3000;
+        </div>
+    </div>
+
+</div>

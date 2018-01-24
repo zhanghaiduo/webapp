@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height width=device-width initial-scale=1 minimum-scale=1  maximum-scale=1">
+    <meta http-equiv="cache-control" content="public, max-age=0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <title>
+        我的
+    </title>
+    <!--首先引入bootstrap-->
+    <link rel="stylesheet" href="../public/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- 引入图标的样式CSS -->
+    <link rel="stylesheet" href="../public/css/iconfont.css">
+    <!-- 引入公共的样式CSS -->
+    <link rel="stylesheet" href="../public/css/common.css">
+
+</head>
+
+<style>
+    #user {
+        color: #1aad19
+    }
+    
+    .icon-wode:before {
+        content: "\e61e";
+    }
+    
+    .userContainer {
+        border-bottom: 1px solid #eee
+    }
+    
+    .userHeaderContainer {
+        padding: 10px;
+    }
+    
+    .userHeaderContainer>header {
+        background-image: url(../public/images/vip_bg.png);
+        background-size: 100% 100%;
+        width: 100%;
+        height: 230px;
+        padding: 25px 15px;
+        color: #784900
+    }
+    
+    .userHeaderContainer .yin {
+        padding: 2px;
+        background: #ff5555;
+        color: #fff;
+        border-radius: 2px
+    }
+    
+    .userHeaderContainer a {
+        color: #784900
+    }
+    
+    .icon-shezhi {
+        color: #fff !important
+    }
+    
+    .userContainer .userDisplay {
+        height: 60px;
+        line-height: 60px
+    }
+    
+    .userDisplay {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #eee;
+        overflow: hidden
+    }
+    
+    .userDisplay .pull-left {
+        padding: 0 15px;
+    }
+    
+    .userDisplay .pull-right {
+        padding: 0 15px;
+    }
+</style>
+
+<body>
+    <div class="userContainer">
+        <div class="userHeaderContainer">
+            <header>
+                <p class="pull-left f-size16">青栖生活</p>
+                <p class="pull-right">
+                    <a href="#" class="iconfont icon-shezhi"></a>
+                </p>
+                <br>
+                <h3>会员卡</h3>
+                <br>
+                <p>卡号：<span class="f-size18">暂未申请</span></p>
+                <p> <i class="iconfont icon-tishi"> </i> 用卡说明</p>
+                <a href="#" class="pull-right f-size16"><span class="yin">银</span> 申请开通</a>
+            </header>
+        </div>
+        <div class="userDisplay fff ">
+            <div class="pull-left">
+                <icon class="iconfont icon-jifen"> <span class="f-size18">我的积分</span> </icon>
+            </div>
+            <div class="pull-right"><a class="f-size18">0 ></a> </div>
+        </div>
+        <div class="userDisplay fff ">
+            <div class="pull-left">
+                <icon class="iconfont icon-fenxiao"> <span class="f-size18">我的交易</span> </icon>
+            </div>
+            <div class="pull-right"><a class="f-size18">0 ></a> </div>
+        </div>
+        <div class="userDisplay fff ">
+            <div class="pull-left">
+                <icon class="iconfont icon-youhuijuan"> <span class="f-size18">我的现金劵</span> </icon>
+            </div>
+            <div class="pull-right"><a class="f-size18">0 ></a> </div>
+        </div>
+        <div class="userDisplay fff ">
+            <div class="pull-left">
+                <icon class="iconfont icon-shoucang"> <span class="f-size18">我的收藏</span> </icon>
+            </div>
+            <div class="pull-right"><a class="f-size18">0 ></a> </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div style="height:65px"></div>
+    <footer class="fff">
+        <a ui-sref="/" id="home" class="col-xs-3 text-center">
+            <icon class="iconfont icon-home "></icon><br>首页
+        </a>
+        <a ui-sref="hotel" id="hotel" class="col-xs-3 text-center">
+            <icon class="iconfont icon-jiudian "></icon><br>酒店
+        </a>
+        <a ui-sref="buy" id="buy" class="col-xs-3 text-center">
+            <icon class="iconfont icon-buy"></icon><br>已购
+        </a>
+        <a ui-sref="user" id="user" class="col-xs-3 text-center">
+            <icon class="iconfont icon-wode "></icon><br>我的
+        </a>
+    </footer>
+</body>
+
+</html>
+
+<!--引入jquery-->
+<script src="../public/plugins/jquery.min.js"></script>

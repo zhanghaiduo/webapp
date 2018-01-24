@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height width=device-width initial-scale=1 minimum-scale=1  maximum-scale=1">
+    <meta http-equiv="cache-control" content="public, max-age=0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <title>
+        我的
+    </title>
+    <!--首先引入bootstrap-->
+    <link rel="stylesheet" href="../public/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- 引入图标的样式CSS -->
+    <link rel="stylesheet" href="../public/css/iconfont.css">
+    <!-- 引入公共的样式CSS -->
+    <link rel="stylesheet" href="../public/css/common.css">
+
+</head>
+
+<style>
+    #user {
+        color: #1aad19
+    }
+    
+    .icon-wode:before {
+        content: "\e61e";
+    }
+    
+    .user_pointsContainer .jifen {
+        height: 90px;
+    }
+    
+    .user_pointsContainer .jifen .f-size18 {
+        padding-top: 15px;
+    }
+    
+    .user_pointsContainer .jfmx {
+        padding: 15px
+    }
+    
+    .user_pointsContainer .none {
+        height: 170px;
+        padding: 15px
+    }
+    
+    .user_pointsContainer .none>img {
+        width: 150px
+    }
+    
+    .pointsItem {
+        overflow: hidden;
+        padding: 15px;
+        border-bottom: 1px solid #eee
+    }
+</style>
+
+<body>
+    <div class="user_pointsContainer">
+        <header>
+            <img src="../public/images/jf.jpg" alt="">
+        </header>
+        <div class="text-center fff jifen">
+            <p class="f-size18">账户总积分：<span class="f-size22 ff5">0</span></p>
+            <p class="lvse">如何获得积分？</p>
+        </div>
+        <div class="jfmx">
+            <a class="f-size18">积分明细</a>
+        </div>
+        <div class="fff text-center none">
+            <img src="../public/images/none.png" alt="">
+        </div>
+        <div class="fff pointsList">
+            <div class="pointsItem">
+                <div class="pull-left">获得积分</div>
+                <div class="pull-right">+ <span class="ff5">999</span></div>
+            </div>
+            <div class="pointsItem">
+                <div class="pull-left">获得积分</div>
+                <div class="pull-right">+ <span class="ff5">999</span></div>
+            </div>
+            <div class="pointsItem">
+                <div class="pull-left">获得积分</div>
+                <div class="pull-right">+ <span class="ff5">999</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div style="height:65px"></div>
+    <footer class="fff">
+        <a ui-sref="/" id="home" class="col-xs-3 text-center">
+            <icon class="iconfont icon-home "></icon><br>首页
+        </a>
+        <a ui-sref="hotel" id="hotel" class="col-xs-3 text-center">
+            <icon class="iconfont icon-jiudian "></icon><br>酒店
+        </a>
+        <a ui-sref="buy" id="buy" class="col-xs-3 text-center">
+            <icon class="iconfont icon-buy"></icon><br>已购
+        </a>
+        <a ui-sref="user" id="user" class="col-xs-3 text-center">
+            <icon class="iconfont icon-wode "></icon><br>我的
+        </a>
+    </footer>
+</body>
+
+</html>
+
+<!--引入jquery-->
+<script src="../public/plugins/jquery.min.js"></script>

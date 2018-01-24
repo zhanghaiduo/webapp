@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="zq">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height width=device-width initial-scale=1 minimum-scale=1  maximum-scale=1">
+    <meta http-equiv="cache-control" content="public, max-age=0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <title>
+        webapp
+    </title>
+    <!--首先引入bootstrap-->
+    <link rel="stylesheet" href="../public/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- 引入Swiper's CSS -->
+    <link rel="stylesheet" href="../public/swiper/css/swiper.min.css">
+    <!-- 动画 -->
+    <link rel="stylesheet" href="../public/wow/css/animate.css">
+    <!-- 加载顶部进度条 -->
+    <link rel="stylesheet" href="../public/pace/pace-theme-barber-shop.css">
+    <!-- 引入图标的样式CSS -->
+    <link rel="stylesheet" href="../public/css/iconfont.css">
+    <!-- 引入公共的样式CSS -->
+    <link rel="stylesheet" href="../public/css/common.css">
+
+</head>
+
+
+<body>
+    <div ui-view autoscroll="true"></div>
+
+    <footer class="fff">
+        <a ui-sref="/" id="home" class="col-xs-3 text-center">
+            <icon class="iconfont icon-home "></icon><br>首页
+        </a>
+        <a ui-sref="hotel" id="hotel" class="col-xs-3 text-center">
+            <icon class="iconfont icon-jiudian "></icon><br>酒店
+        </a>
+        <a ui-sref="buy" id="buy" class="col-xs-3 text-center">
+            <icon class="iconfont icon-buy"></icon><br>已购
+        </a>
+        <a ui-sref="user" id="user" class="col-xs-3 text-center">
+            <icon class="iconfont icon-wode "></icon><br>我的
+        </a>
+    </footer>
+</body>
+
+</html>
+
+<!--引入jquery-->
+<script src="../public/plugins/jquery.min.js"></script>
+<!--引入angularJS-->
+<script src="../public/plugins/angular/angular.min.js"></script>
+<!--引入angular路由-->
+<script src="../public/plugins/angular/angular-ui-router.js"></script>
+<!--引入angular配置文件-->
+<script src="../public/js/router.js"></script>
+<script src="../public/js/controller.js"></script>
+<!--引入jquery.cookie-->
+<script src="../public/plugins/jquery.cookie.js"></script>
+<!--引入 Swiper JS -->
+<script src="../public/swiper/js/swiper.min.js"></script>

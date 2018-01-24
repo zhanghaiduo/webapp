@@ -1,0 +1,317 @@
+<!-- 引入日历CSS -->
+<link rel="stylesheet" href="../public/calendar/css/calendar.css">
+<style>
+    #hotel {
+        color: #1aad19
+    }
+    
+    .icon-jiudian:before {
+        content: "\e61d";
+    }
+    
+    .hotelHeader {
+        position: fixed;
+        width: 100%;
+        background: #F8F8F8;
+    }
+    
+    .paixuShow,
+    .shaixuanShow,
+    .xingjiShow,
+    .jiageShow {
+        display: none
+    }
+    
+    .paixuShow>div hr,
+    .shaixuanShow>div hr,
+    .xingjiShow>div hr,
+    .jiageShow>div hr {
+        margin-top: 10px
+    }
+    
+    .paixuShow>div,
+    .shaixuanShow>div,
+    .xingjiShow>div,
+    .jiageShow>div {
+        padding: 0 20px;
+        /* margin-bottom: 10px; */
+    }
+    
+    .hotelList p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .hotelList .f-size12 {
+        margin-top: 30px;
+        padding: 0
+    }
+    
+    .hotelList {
+        border-bottom: 1px solid #eee
+    }
+    
+    .f-size14 {
+        font-size: 14px;
+    }
+</style>
+<div class="hotelHeader">
+    <div id="checkinout">
+        <div id="firstSelect" style="width:110px;">
+            <div class="Date_lr">
+                <P>入住</p>
+                <input id="startDate" type="text" value="" readonly>
+            </div>
+            <div class="Date_lr">
+                <p>离店</p>
+                <input id="endDate" type="text" value="" readonly>
+            </div>
+        </div>
+        <div><i class="iconfont icon-sousuo"></i></div>
+        <input style="height:47px;border:none" type="text" class="form-control searchInput" placeholder="酒店名称/位置不限">
+    </div>
+    <div class="mask_calendar">
+        <div class="calendar"></div>
+    </div>
+    <!-- 筛选菜单 -->
+    <div class="fff" style="height:40px;line-height:40px">
+        <div class="col-xs-3 text-center" onclick="show(this)">
+            <span class="paixu">排序</span>
+            <i class="iconfont icon-triangle-copy-copy-copy  f-size16"></i>
+            <i class="iconfont icon-triangle-copy-copy-copy-copy  f-size16 lvse  none"></i>
+        </div>
+        <div class="col-xs-3 text-center border-left-right ">
+            <span class="saixuan">筛选</span>
+            <i class="iconfont icon-triangle-copy-copy-copy  f-size16"></i>
+        </div>
+        <div class="col-xs-3 text-center  border-right ">
+            <span class="xingji">星级</span>
+            <i class="iconfont icon-triangle-copy-copy-copy  f-size16"></i>
+        </div>
+        <div class="col-xs-3 text-center">
+            <span class="jiage">价格</span>
+            <i class="iconfont icon-triangle-copy-copy-copy  f-size16"></i>
+        </div>
+        <div></div>
+    </div>
+    <!-- 排序下级 -->
+    <div class="paixuShow fff">
+        <br>
+        <div>
+            <div class="pull-left ">距离</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">评价</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">优惠</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <br>
+    </div>
+    <!-- 筛选下级 -->
+    <div class="shaixuanShow fff">
+        <br>
+        <div>
+            <div class="pull-left ">民宿</div>
+            <i class="iconfont icon-artboard pull-right lvse lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">酒店</div>
+            <i class="iconfont icon-artboard pull-right  lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">客栈</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">居家</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">温泉</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <br>
+    </div>
+    <!-- 星级下级 -->
+    <div class="xingjiShow fff">
+        <br>
+        <div>
+            <div class="pull-left ">所有</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">一星</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">二星</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">三星</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">四星</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">五星</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <br>
+    </div>
+    <!-- 价格下级 -->
+    <div class="jiageShow fff">
+        <br>
+        <div>
+            <div class="pull-left ">从高到底</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <div>
+            <div class="pull-left ">从低到高</div>
+            <i class="iconfont icon-artboard pull-right lvse none"></i>
+            <div style="clear:both"></div>
+            <hr>
+        </div>
+        <br>
+    </div>
+    <div ui-sref="hotel_detail({id:121212})" class="fff hotelList">
+        <br>
+        <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+        <div class="col-xs-5">
+            <br>
+            <p>三亚鹿山海景酒店</p>
+            <p>abcdefgddddddd</p>
+        </div>
+        <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+        <div style="clear:both"></div>
+        <br>
+    </div>
+    <div ui-sref="hotel_detail" class="fff hotelList">
+        <br>
+        <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+        <div class="col-xs-5">
+            <br>
+            <p>三亚鹿山海景酒店</p>
+            <p>abcdefgddddddd111111</p>
+        </div>
+        <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+        <div style="clear:both"></div>
+        <br>
+    </div>
+
+    <div ui-sref="hotel_detail" class="fff hotelList">
+        <br>
+        <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+        <div class="col-xs-5">
+            <br>
+            <p>三亚鹿山海景酒店</p>
+            <p>abcdefgddddddd111111</p>
+        </div>
+        <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+        <div style="clear:both"></div>
+        <br>
+    </div>
+</div>
+
+
+
+
+<div style="height:65px;"></div>
+<!-- 引入日历插件 -->
+<script src="../public/calendar/js/date.js"></script>
+<!-- 日历插件配置 -->
+<script>
+    $(function() {
+        $('#firstSelect').on('click', function() {
+            $('.mask_calendar').show();
+        });
+        $('.mask_calendar').on('click', function(e) {
+            if (e.target.className == "mask_calendar") {
+                $('.calendar').slideUp(200);
+                $('.mask_calendar').fadeOut(200);
+            }
+        })
+        $('#firstSelect').calendarSwitch({
+            selectors: {
+                sections: ".calendar"
+            },
+            index: 4, //展示的月份个数
+            animateFunction: "slideToggle", //动画效果
+            controlDay: true, //知否控制在daysnumber天之内，这个数值的设置前提是总显示天数大于90天
+            daysnumber: "90", //控制天数
+            comeColor: "#2EB6A8", //入住颜色
+            outColor: "#2EB6A8", //离店颜色
+            comeoutColor: "#E0F4F2", //入住和离店之间的颜色
+            callback: function() { //回调函数
+                $('.mask_calendar').fadeOut(200);
+                var startDate = $('#startDate').val(); //入住的天数
+                var endDate = $('#endDate').val(); //离店的天数
+                var NumDate = $('.NumDate').text(); //共多少晚
+                console.log(startDate);
+                console.log(endDate);
+                console.log(NumDate);
+                //下面做ajax请求
+                //show_loading();
+                /*$.post("demo.php",{startDate:startDate, endDate:endDate, NumDate:NumDate},function(data){
+                	if(data.result==1){
+                		//成功
+                	} else {
+                		//失败
+                	}
+                });*/
+            },
+            comfireBtn: '.comfire' //确定按钮的class或者id
+        });
+        var b = new Date();
+        var ye = b.getFullYear();
+        var mo = b.getMonth() + 1;
+        mo = mo < 10 ? "0" + mo : mo;
+        var da = b.getDate();
+        da = da < 10 ? "0" + da : da;
+        $('#startDate').val(ye + '-' + mo + '-' + da);
+        b = new Date(b.getTime() + 24 * 3600 * 1000);
+        var ye = b.getFullYear();
+        var mo = b.getMonth() + 1;
+        mo = mo < 10 ? "0" + mo : mo;
+        var da = b.getDate();
+        da = da < 10 ? "0" + da : da;
+        $('#endDate').val(ye + '-' + mo + '-' + da);
+    });
+</script>

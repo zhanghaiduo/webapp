@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height width=device-width initial-scale=1 minimum-scale=1  maximum-scale=1">
+    <meta http-equiv="cache-control" content="public, max-age=0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <title>
+        酒店收藏
+    </title>
+    <!--首先引入bootstrap-->
+    <link rel="stylesheet" href="../public/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- 引入图标的样式CSS -->
+    <link rel="stylesheet" href="../public/css/iconfont.css">
+    <!-- 引入公共的样式CSS -->
+    <link rel="stylesheet" href="../public/css/common.css">
+
+</head>
+
+<style>
+    /* 当前页面导航变绿色开始 */
+    
+    #user {
+        color: #1aad19
+    }
+    
+    .icon-wode:before {
+        content: "\e61e";
+    }
+    /* 当前页面导航变绿色结束 */
+    
+    .user_collecContainer {
+        padding: 15px
+    }
+    
+    .user_collecHeader {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        position: fixed;
+        text-align: center
+    }
+    
+    .user_collecContainer .orange {
+        margin-top: 30px;
+        padding: 0
+    }
+    
+    .user_collecContainer .hotelList {
+        border-bottom: 1px solid #eee
+    }
+    
+    .hotelList p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
+<body>
+    <header class="fff user_collecHeader f-size18">
+        <span class="pull-left">&#x3000;<</span><span>酒店收藏&#x3000;&#x3000;</span>
+    </header>
+    <div class="user_collecContainer">
+        <div style="height:50px"></div>
+        <div class="fff hotelList">
+            <br>
+            <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+            <div class="col-xs-5">
+                <br>
+                <p>三亚鹿山海景酒店</p>
+                <p>描述abcdefgddddddd</p>
+            </div>
+            <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+            <div style="clear:both"></div>
+            <br>
+        </div>
+        <div ui-sref="hotel_detail" class="fff hotelList">
+            <br>
+            <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+            <div class="col-xs-5">
+                <br>
+                <p>三亚鹿山海景酒店</p>
+                <p>abcdefgddddddd111111</p>
+            </div>
+            <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+            <div style="clear:both"></div>
+            <br>
+        </div>
+
+        <div ui-sref="hotel_detail" class="fff hotelList">
+            <br>
+            <div class="col-xs-4"><img height="100px" src="../public/images/none.png" alt=""></div>
+            <div class="col-xs-5">
+                <br>
+                <p>三亚鹿山海景酒店</p>
+                <p>abcdefgddddddd111111</p>
+            </div>
+            <div class="col-xs-3 orange f-size12">￥<span class="f-size14">011.01起</span></div>
+            <div style="clear:both"></div>
+            <br>
+        </div>
+    </div>
+    </div>
+    <!-- 底部导航 -->
+    <div style="height:65px"></div>
+    <footer class="fff">
+        <a ui-sref="/" id="home" class="col-xs-3 text-center">
+            <icon class="iconfont icon-home "></icon><br>首页
+        </a>
+        <a ui-sref="hotel" id="hotel" class="col-xs-3 text-center">
+            <icon class="iconfont icon-jiudian "></icon><br>酒店
+        </a>
+        <a ui-sref="buy" id="buy" class="col-xs-3 text-center">
+            <icon class="iconfont icon-buy"></icon><br>已购
+        </a>
+        <a ui-sref="user" id="user" class="col-xs-3 text-center">
+            <icon class="iconfont icon-wode "></icon><br>我的
+        </a>
+    </footer>
+</body>
+
+</html>
+
+<!--引入jquery-->
+<script src="../public/plugins/jquery.min.js"></script>

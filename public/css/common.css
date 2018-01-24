@@ -1,0 +1,107 @@
+/* 公共的css 开始*/
+
+body {
+    background: #F8F8F8;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 7px;
+    z-index: 9999;
+    font-size: 12px;
+    color: #999
+}
+
+.fff {
+    background: #ffffff;
+}
+
+.lvse {
+    color: #1aad19
+}
+
+.swiper-pagination-bullet-active {
+    background: #1aad19;
+    width: 20px;
+    border-radius: 20px;
+}
+
+.swiper-pagination {
+    text-align: right
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    left: -20px;
+}
+
+.f-size18 {
+    font-size: 18px;
+}
+
+.f-size22 {
+    font-size: 22px;
+}
+
+.f-size16 {
+    font-size: 16px;
+}
+
+.f-size14 {
+    font-size: 14px;
+}
+
+.f-size12 {
+    font-size: 12px;
+}
+
+a {
+    color: #999;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #999;
+}
+
+.orange {
+    color: orange
+}
+
+.color999 {
+    color: #999
+}
+
+.margin-bottom-top {
+    margin: 10px 0
+}
+
+.border-left-right {
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.border-right {
+    border-right: 1px solid #eee;
+}
+
+.none {
+    display: none
+}
+
+.ff5 {
+    color: #ff5555;
+}
+
+.buyActive {
+    background: rgb(244, 248, 244);
+    color: #1aad19
+}
+
+
+/* 公共的css 结束*/
